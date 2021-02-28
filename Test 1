@@ -1,0 +1,64 @@
+# ФИО: Ибрагимова Насипа Тагайевна
+# e-mail: nasipa.ibragimova@gmail.com
+
+# Task 1
+print("Задание 1")
+lst = [92, 91, 49, 87, 74, 20, 94, 12, 64, 36, 97, 2, 96, 40, 97, 36, 32, 22, 80, 83, 49, 52, 62, 31, 55, 86, 84, 1, 22, 15, 52, 18, 78, 92, 21, 9, 85, 89, 54, 99, 80, 7, 4, 31, 30, 28, 59, 35, 72, 33]
+my_lst = {i: lst[i] for i in range(0, len(lst))}
+print(my_lst)
+
+
+# Task 2 Игра "угадай число"
+from random import randint
+print("Задание 2. Игра угадай число")
+attempts = 0
+num = randint(1,20)
+while attempts < 5:
+    my_num = int(input("Введите число: "))
+    attempts = attempts + 1
+
+    if my_num < num:
+        print("слишком мало")
+
+    if my_num > num:
+        print("слишком много")
+
+    if my_num == num:
+        break
+
+if my_num == num:
+    print("Класс! Вы угадали")
+
+if my_num != num:
+    print("Все, вы не выиграли. Игра завершилась")
+    
+
+
+# Task 3
+print("Задание 3")
+text = 'Adverts'
+
+# print(text[2:5]) => ver 
+
+if len(text) % 2 != 0:
+    mid =  int(len(text)) // 2
+    print(text[mid-1],text[mid],text[mid+1])
+
+# text = input("Введите слово из семи символов: ")
+# if len(text) == 7 and len(text) % 2 != 0:
+    # mid =  int(len(text)) // 2
+    # print(text[mid-1],text[mid],text[mid+1])
+# else:
+#     print("Введенное слово не имеет семи символов!")
+
+
+# Task 4 
+print("Задание 4")
+a = list("Aidana")
+b = list("Adilet")
+
+c = []
+for i, j in zip(a,b):
+    c = i+j
+    print("".join(c))
+
